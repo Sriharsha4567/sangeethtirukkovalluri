@@ -1,0 +1,22 @@
+def fun(x, y, n):
+    arr[x - 1] = y
+    ans=1
+    for i in range(1, n):
+        if arr[i] != arr[i-1]:
+            ans += 1
+    return "Number os students part of merit list are :" , ans 
+
+
+
+n = int(input("enter number of studens:"))
+k = int(input("enter number of re eveluations:"))
+
+arr = []
+
+for i in range(n):
+    arr.append(int(input(f"enter marks of student {i+1}:")))
+
+for i in range(k):
+    x = int(input("enter matrix position to update"))
+    y = int(input("enter re-evaluated marks:"))
+    print(fun(x,y,n))
